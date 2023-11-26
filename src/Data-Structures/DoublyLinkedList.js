@@ -1,10 +1,9 @@
-import { defaultEquals } from '../../util.js';
 import LinkedList from './LinkedList.js';
 import { DoublyNode } from '../../models/LinkedListModels.js';
 
 export default class DoublyLinkedList extends LinkedList {
-    constructor(equalsFn = defaultEquals) {
-        super(equalsFn);
+    constructor() {
+        super();
         this.tail = null;
     }
 
@@ -84,7 +83,7 @@ export default class DoublyLinkedList extends LinkedList {
         let current = this.head;
         let index = 0;
         while (current != null) {
-            if (this.equalsFn(element, current.getElement())) {
+            if (element === current.getElement()) {
                 return index;
             }
             index++;

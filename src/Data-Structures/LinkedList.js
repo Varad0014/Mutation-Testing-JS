@@ -1,10 +1,9 @@
-import { defaultEquals } from '../../util.js';
+
 import { Node } from '../../models/LinkedListModels.js';
 
 
 export default class LinkedList {
-  constructor(equalsFn = defaultEquals) {
-    this.equalsFn = equalsFn;
+  constructor() {
     this.count = 0;
     this.head = null;
   }
@@ -81,7 +80,7 @@ export default class LinkedList {
   indexOf(element) {
     let current = this.head;
     for (let i = 0; i < this.size() && current != null; i++) {
-      if (this.equalsFn(element, current.getElement())) {
+      if (element === current.getElement()) {
         return i;
       }
       current = current.getNext();
