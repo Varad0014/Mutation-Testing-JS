@@ -175,6 +175,12 @@ describe('Doubly Linked List Tests', () => {
    
     describe('.insertAt(element, index)', () => {
 
+        it('insert at index 0 in empty list', () => {
+            const doublyLinkedList = new DoublyLinkedList();
+            doublyLinkedList.insertAt(0, 0);
+            expect(doublyLinkedList.size()).to.equal(1);
+            expect(doublyLinkedList.getElementAt(0).getElement()).to.equal(0);
+        });
         it('insert at index 0', () => {
             const doublyLinkedList = new DoublyLinkedList();
             doublyLinkedList.push(1);
