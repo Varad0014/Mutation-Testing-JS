@@ -1,5 +1,5 @@
 import LinkedList from './LinkedList.js';
-import { DoublyNode } from '../../models/LinkedListModels.js';
+import { DoublyNode } from '../models/LinkedListModels.js';
 
 export default class DoublyLinkedList extends LinkedList {
     constructor() {

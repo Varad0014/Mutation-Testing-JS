@@ -14,7 +14,6 @@ export class Node {
 
   setNext(next) {
     this.next = next || null;
-    return this;
   }
 
   getNext() {
@@ -24,13 +23,12 @@ export class Node {
 };
 
 export class DoublyNode extends Node {
-    constructor(element, next, prev) {
+    constructor(element, next=null, prev=null) {
         super(element, next);
         this.prev = prev;
     }
     setElement(element) {
       this.element = element;
-      return this;
     }
   
     getElement() {
@@ -38,18 +36,14 @@ export class DoublyNode extends Node {
     }
   
     setNext(next) {
-      
       this.next = next || null;
-      return this;
     }
   
     getNext() {
       return this.next;
     }
     setPrev(prev) {
-      
       this.prev = prev || null;
-      return this;
     }
   
     getPrev() {

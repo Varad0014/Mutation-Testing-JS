@@ -1,5 +1,5 @@
 
-import { Node } from '../../models/LinkedListModels.js';
+import { Node } from '../models/LinkedListModels.js';
 
 
 export default class LinkedList {
